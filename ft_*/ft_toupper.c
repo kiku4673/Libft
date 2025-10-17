@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyamanak <yamanak@student.42tokyo.jp>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 23:28:15 by kyamanak          #+#    #+#             */
-/*   Updated: 2025/10/17 22:17:12 by kyamanak         ###   ########.fr       */
+/*   Created: 2025/10/17 21:49:51 by kyamanak          #+#    #+#             */
+/*   Updated: 2025/10/17 22:08:11 by kyamanak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stdio.h>
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+/*
+int main(void)
+{
+	char test[] = {'a', 'z', 'A', 'Z', '5', '#', ' ', '\n', 0};
+	int i = 0;
 
-int	ft_strlen(char *str);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-
-#endif
+	while (test[i])
+	{
+		printf("ft_toupper('%c') = '%c' (%d)\n",
+			test[i], ft_toupper(test[i]), ft_toupper(test[i]));
+		i++;
+	}
+	return (0);
+}
+*/
